@@ -1,13 +1,14 @@
 'use strict';
 
 module.exports = (options = {}) => {
-  const _tmp = options.set || {};
-  const _setKeys = Object.keys(_tmp);
-  const _set = _setKeys.reduce((ret, key, idx) => {
-    ret[key.toLowerCase()] = _tmp[key];
-    _setKeys[idx] = key.toLowerCase();
-    return ret;
+  // 将键值对的键名变小写
+  const optionHeaders = Object.keys(options).reduce((headers, key) => {
+    headers[key.toLowerCase()] = options[key];
+    return headers;
   }, {});
+
+  // 抽取键名
+  const optionsHeaderKeys = Object.keys(optionHeaders);
 
   return async (ctx, next) => {
     await next();
@@ -15,9 +16,9 @@ module.exports = (options = {}) => {
     const response = ctx.response;
     const headers = response.headers;
 
-    for (const key of _setKeys) {
+    for (const key of optionsHeaderKeys) {
       if (!headers[key]) {
-        response.set(key, _set[key]);
+        response.set(key, optionHeaders[key]);
       }
     }
   };

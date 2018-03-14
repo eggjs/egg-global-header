@@ -40,15 +40,13 @@ exports.globalHeader = {
 
 ## Configuration
 
-Set the response key-value pairs in `set` field of the plugin configuration:
+Set the response key-value pairs in the plugin configuration:
 
 ```js
 // {app_root}/config/config.default.js
 exports.globalHeader = {
-  set: {
-    'Powered-by': '23333',
-    'Cache-Control': 'no-cache',
-  }
+  'Powered-by': '23333',
+  'Cache-Control': 'no-cache',
 };
 ```
 
