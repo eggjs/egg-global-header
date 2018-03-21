@@ -10,7 +10,7 @@ module.exports = (options = {}) => {
   // 抽取键名
   const optionsHeaderKeys = Object.keys(optionHeaders);
 
-  return async (ctx, next) => {
+  return async function globalHeaderMiddleware(ctx, next) {
     await next();
 
     const response = ctx.response;

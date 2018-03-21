@@ -1,5 +1,7 @@
 'use strict';
 
 module.exports = app => {
-  app.config.coreMiddleware.push('globalHeader');
+  if (app.config.globalHeader && Object.keys(app.config.globalHeader).length) {
+    app.config.coreMiddleware.push('globalHeader');
+  }
 };
