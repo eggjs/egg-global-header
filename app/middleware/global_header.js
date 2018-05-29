@@ -17,7 +17,7 @@ module.exports = (options = {}) => {
     const headers = response.headers;
 
     for (const key of optionHeaderKeys) {
-      if (!headers[key]) {
+      if (!(key in headers)) {
         response.set(key, optionHeaders[key]);
       }
     }
