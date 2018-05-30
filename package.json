@@ -1,0 +1,51 @@
+{
+  "name": "egg-global-header",
+  "version": "1.0.0",
+  "description": "Egg plugin for setting response header globally.",
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "eggPlugin": {
+    "name": "globalHeader"
+  },
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-global-header.git"
+  },
+  "keywords": [
+    "header",
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "author": "XadillaX <i@2333.moe>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eggjs/egg-global-header/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-global-header#readme",
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "egg": "^2.0.0",
+    "egg-bin": "^4.3.7",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.15.0",
+    "eslint": "^4.18.2",
+    "eslint-config-egg": "^7.0.0",
+    "supertest": "^3.0.0"
+  },
+  "files": [
+    "app",
+    "config",
+    "app.js"
+  ],
+  "dependencies": {}
+}
