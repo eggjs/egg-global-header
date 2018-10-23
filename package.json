@@ -51,7 +51,5 @@
     "config",
     "app.js"
   ],
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
