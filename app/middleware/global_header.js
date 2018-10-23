@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (options = {}) => {
+module.exports = options => {
   // lowercase key-value pairs' keys
   const optionHeaders = {};
   const optionHeaderKeys = [];
