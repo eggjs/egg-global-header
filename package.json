@@ -1,6 +1,6 @@
 {
   "name": "egg-global-header",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Egg plugin for setting response header globally.",
   "scripts": {
     "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
