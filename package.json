@@ -13,8 +13,12 @@
   "eggPlugin": {
     "name": "globalHeader"
   },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
   "ci": {
-    "version": "8, 9"
+    "version": "8, 10",
+    "license": 2018
   },
   "repository": {
     "type": "git",
@@ -29,18 +33,18 @@
   "author": "XadillaX <i@2333.moe>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eggjs/egg-global-header/issues"
+    "url": "https://github.com/eggjs/egg/issues"
   },
   "homepage": "https://github.com/eggjs/egg-global-header#readme",
   "devDependencies": {
     "autod": "^3.0.1",
-    "egg": "^2.0.0",
-    "egg-bin": "^4.3.7",
-    "egg-ci": "^1.8.0",
-    "egg-mock": "^3.15.0",
-    "eslint": "^4.18.2",
-    "eslint-config-egg": "^7.0.0",
-    "supertest": "^3.0.0"
+    "egg": "^2.12.0",
+    "egg-bin": "^4.9.0",
+    "egg-ci": "^1.10.0",
+    "egg-mock": "^3.20.1",
+    "eslint": "^5.7.0",
+    "eslint-config-egg": "^7.1.0",
+    "supertest": "^3.3.0"
   },
   "files": [
     "app",
